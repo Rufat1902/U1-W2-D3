@@ -267,7 +267,7 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
   Una volta fatto crea un console.log per controllare la proprietà length di "charactersNames" prima e dopo l'operazione.
 */
 
-console.log("Əvvəl:", charactersNames.length);
+console.log("Before:", charactersNames.length);
 
 for (let i = 0; i < femaleCharacters.length; i++) {
   const index = charactersNames.indexOf(femaleCharacters[i].name);
