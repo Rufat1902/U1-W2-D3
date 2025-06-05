@@ -174,21 +174,21 @@ console.log(eyeColor);
   Usa un while loop per calcolare la massa totale dell'equipaggio. Salvala in una variabile chiamata "crewMass".
 */
 
-let i = 0;
-let crewMass = 0;
+// let i = 0;
+// let crewMass = 0;
 
-while (i < starWarsCharacters.length) {
-  let mass = parseInt(starWarsCharacters[i].mass);
+// while (i < starWarsCharacters.length) {
+//   let mass = parseInt(starWarsCharacters[i].mass);
 
-  if (!isNaN(mass)) {
-    crewMass += mass;
-  }
-  {
-    i++
-  }
-}
+//   if (!isNaN(mass)) {
+//     crewMass += mass;
+//   }
+//   {
+//     i++
+//   }
+// }
 
-console.log(crewMass);
+// console.log(crewMass);
 
 /* ESERCIZIO 7
   Crea uno if/else statement per rivelare la tipologia di carico, utilizzando la massa totale, di un'ipotetica astronave contenente i personaggi dell'array "starWarsCharacters".
@@ -202,35 +202,42 @@ console.log(crewMass);
   Una volta fatto, modifica la massa di qualche elemento dell'equipaggio e vedi se riesci ad ottenere un messaggio diverso.
 */
 
-if(crewMass < 500){
-  console.log('Ship is under loaded');}
-  else if(crewMass > 500 && crewMass < 700){
-    console.log('Ship is half loaded');
+// if(crewMass < 500){
+//   console.log('Ship is under loaded');}
+//   else if(crewMass > 500 && crewMass < 700){
+//     console.log('Ship is half loaded');
     
-}
-else if(crewMass > 700 && crewMass < 900){
-  console.log('Warning: Load is over 700');
+// }
+// else if(crewMass > 700 && crewMass < 900){
+//   console.log('Warning: Load is over 700');
   
-}
-else if(crewMass > 900 && crewMass < 10000){
-  console.log('Critical Load: Over 900');
+// }
+// else if(crewMass > 900 && crewMass < 10000){
+//   console.log('Critical Load: Over 900');
   
-}
-else {
-  console.log('DANGER! OVERLOAD ALERT: escape from ship now');
+// }
+// else {
+//   console.log('DANGER! OVERLOAD ALERT: escape from ship now');
   
-}
+// }
 
-starWarsCharacters[0].mass = 254
-starWarsCharacters[1].mass = 70
-starWarsCharacters[2].mass = 83
-starWarsCharacters[3].mass = 70
+starWarsCharacters[1].mass = 32
+starWarsCharacters[2].mass = 50
+starWarsCharacters[3].mass = 42
 starWarsCharacters[4].mass = 43
-starWarsCharacters[5].mass = 80
 starWarsCharacters[6],mass = 50
-starWarsCharacters[7].mass = 32
-starWarsCharacters[8].mass = 70
-starWarsCharacters[8].mass = 47
+starWarsCharacters[8].mass = 40
+
+let i = 0;
+let crewMass = 0;
+
+while (i < starWarsCharacters.length) {
+  let mass = parseInt(starWarsCharacters[i].mass);
+  if (!isNaN(mass)) {
+    crewMass += mass;
+  }
+  i++;
+}
 
 
 if(crewMass < 500){
@@ -288,5 +295,5 @@ const randomIndex = Math.floor(Math.random() * starWarsCharacters.length);
 const randomCharacter = starWarsCharacters[randomIndex];
 
 console.log(
-  `${randomCharacter.name} gender c${randomCharacter.gender}, height ${randomCharacter.height} cm and eye color is ${randomCharacter.eye_color}`
+  `${randomCharacter.name} gender ${randomCharacter.gender}, height ${randomCharacter.height} cm and eye color is ${randomCharacter.eye_color}`
 );
